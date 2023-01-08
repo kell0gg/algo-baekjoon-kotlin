@@ -57,3 +57,17 @@ var next = if (i == flowerbed.size - 1) 0 else tmp[i + 1]
             }
         )
 ```
+
+### Comparator 사용
+
+- 조건 여러 개면 when 으로 처리
+
+```kotlin
+    val customComparator = Comparator<Int> { a, b ->
+        when {
+            (a == null && b == null) -> 0
+            (a == null) -> -1
+            else -> 1
+        }
+    }
+```
